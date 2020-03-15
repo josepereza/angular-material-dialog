@@ -11,17 +11,19 @@ import { MyModalComponent } from './my-modal/my-modal.component';
 export class AppComponent {
   name: string;
   color: string;
+  auto: string
 
   constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MyModalComponent, {
       width: '250px',
-      data: { name: this.name, color: this.color }
+      data: { name: this.name, color: this.color, auto: this.auto }
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      this.color = res;
+      this.color = res.color;
+      this.auto = res.auto;
     });
   }
 }

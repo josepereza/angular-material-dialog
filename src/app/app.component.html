@@ -1,11 +1,17 @@
-<div>
-  <mat-form-field>
-    <input matInput [(ngModel)]="name" placeholder="What's your favorite color?">
-  </mat-form-field>
+<div class="container">
+  <div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </div>
+  <h4 *ngIf="color">
+    You selected: <p style="font-weight: bold">{{color}}</p>
+  </h4>
+  <h4 *ngIf="color">
+    You selected: <p style="font-weight: bold">{{auto}}</p>
+  </h4>
+  
 </div>
-<div>
-  <button mat-raised-button (click)="openDialog()">Pick one</button>
-</div>
-<h4 *ngIf="color">
-  You selected: <p style="font-weight: bold">{{color}}</p>
-</h4>

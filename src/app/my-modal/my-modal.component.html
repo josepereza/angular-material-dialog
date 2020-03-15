@@ -4,8 +4,13 @@
   <mat-form-field>
     <input matInput [(ngModel)]="data.color">
   </mat-form-field>
+
+  <p>What's your favorite auto?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.auto">
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.color" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 </div>
